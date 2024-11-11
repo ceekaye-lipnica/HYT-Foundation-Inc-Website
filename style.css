@@ -1,0 +1,384 @@
+
+/* ---------RESETS--------- */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+font,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+    border: 0;
+    font-family: inherit;
+    font-size: 100%;
+    font-style: inherit;
+    font-weight: inherit;
+    margin: 0;
+    outline: 0;
+    padding: 0;
+    vertical-align: baseline;
+    scroll-behavior: smooth;
+    list-style: none;
+}
+
+html {
+    font-size: 62.5%;
+    height: 100%;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.6rem;
+    overflow-x: hidden;
+    line-height: 1.4;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+article,
+aside,
+footer,
+header,
+nav,
+section,
+time {
+    display: block;
+}
+a {
+    text-decoration: none;
+}
+img {
+    max-width: 100%;
+}
+
+/* FOR REMOVING THE BLANK SPACE ON THE SIDE  */
+@media screen and (max-width: 1024px) {
+    html,body{
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    html,body{
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+    }
+}
+
+/*------------CONTAINER/GRID-------------*/
+.container{
+max-width: 120rem;
+margin: 0 auto;
+padding: 1rem 1.5rem;
+}
+
+/* COLORS  */
+:root {
+    --orange: #F15932;
+    --yellow: #fcf531;
+    --cyan: #00a6b4;
+    --red: #ce3e4b;
+    --light: #ffffff;
+    --dark: #191919;
+}
+
+/* BUTTON CSS */
+.btn{
+    padding: 1rem 1.5rem;
+    display: inline-block;
+    font-size: 1.5rem;
+    border-radius: 10px;
+} 
+
+.main{
+    color: var(--yellow);
+    background-color: transparent;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    border: 2px solid var(--yellow);
+    transition: .5s ease-in;
+}
+
+.main:hover{
+    background-color: var(--yellow);
+    color: var(--light);
+    border: 2px solid var(--yellow);
+    transition: .5s ease-in;
+}
+
+.mainWhite{
+    color: var(--dark);
+    background-color: var(--light);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    border: 2px solid var(--light);
+    transition: .5s ease-in;
+}
+
+.mainWhite:hover{
+    background-color: transparent;
+    color: var(--light);
+    border: 2px solid var(--light);
+    transition: .5s ease-in;
+}
+
+.happy-monkey{
+    font-family: "Happy Monkey", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+
+
+/* ===== BANNER SECTION ===== */
+
+/* HEADER */
+.banner-header-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid grey;
+    padding: 1rem 0;
+}
+
+.banner-header-top-socials{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.banner-header-top-socials li a i{
+    color: var(--cyan);
+    font-size: 1.6rem
+}
+
+.banner-header-top-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.banner-header-top-text li a{
+    color: var(--light);
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+.banner-header-bot{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 2rem 0;
+}
+
+.banner-header-bot-logo img{
+    width: 25rem;
+}
+
+.banner-header-bot-nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+}
+
+.banner-header-bot-nav li a{
+    font-size: 1.8rem;
+    color: var(--light);
+    font-weight: 700;
+}
+
+.banner-header-bot-nav li a:hover{
+    color: var(--yellow);
+}
+
+
+/* BANNER */
+.banner{
+    background-image: url('./img/banner-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.banner-bg{
+    background-color: rgba(0, 0, 0, 0.7);
+    padding-bottom: 20rem;
+}
+
+.banner-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+
+    padding-top: 5rem;
+}
+
+.banner-wrapper h3{
+    color: var(--orange);
+    font-size: 6rem;
+    font-weight: 700;
+    line-height: 1.2;
+    text-align: center;
+    text-transform: uppercase;
+
+    font-family: "Happy Monkey", system-ui;
+    font-style: normal;
+}
+
+.banner-wrapper h3 span{
+    display: block;
+}
+
+.banner-wrapper h3 .cyantxt{
+    color: var(--cyan);
+}
+
+.banner-wrapper h3 .yellowtxt{
+    color: var(--yellow);
+}
+
+.banner-wrapper p{
+    text-align: center;
+    width: 50rem;
+    margin: 0 auto;
+    color: var(--light);
+    font-size: 1.4rem;
+    line-height: 1.2;
+}
+
+
+/* ===== ABOUT SECTION ===== */
+.about{
+    padding: 2rem 0;
+    background-color: var(--light);
+}
+
+.about-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: -15rem;
+}
+
+
+.about-cards{
+    width: 40rem;
+    height: 23rem;
+    padding: 2.5rem;
+}
+
+.about-cards h3{
+    color: var(--light);
+    font-weight: 700;
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.about-cards p{
+    color: var(--light);
+    font-size: 1.4rem;
+    text-align: justify;
+}
+
+.card-1{
+    background-color: var(--orange);
+}
+
+.card-2{
+    background-color: var(--cyan);
+    width: 45rem;
+    height: 26rem;
+
+}
+
+.card-3{
+    background-color: #c9c325;
+}
+
+
+/* ===== VALUES SECTION ===== */
+.values{
+    padding: 3rem 0 ;
+}
