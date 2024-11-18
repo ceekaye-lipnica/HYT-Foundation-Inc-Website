@@ -294,6 +294,8 @@ padding: 1rem 1.5rem;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+
+    position: relative;
 }
 
 .toggle__menu{
