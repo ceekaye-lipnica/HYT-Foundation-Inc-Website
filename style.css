@@ -296,6 +296,10 @@ padding: 1rem 1.5rem;
     background-attachment: fixed;
 }
 
+.toggle__menu{
+    display: hidden;
+}
+
 .banner-bg{
     background-color: rgba(0, 0, 0, 0.7);
     padding-bottom: 20rem;
@@ -345,6 +349,91 @@ padding: 1rem 1.5rem;
 }
 
 
+@media screen and (max-width: 500px){
+    .banner-bg{
+        padding-bottom: 5rem;
+    }
+
+    .banner-header-bot-logo img{
+        width: 15rem;
+    }
+
+    .banner-header-bot-nav{
+        background: var(--dark);
+        position: absolute;
+        top: 15rem;
+        overflow: hidden;
+        max-height: 0;
+        right: 0;
+        width: 100%;
+        height: fit-content;
+        transition: .5s ease;
+        z-index: 3;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+    }
+
+    .banner-header-bot-nav.open{
+        max-height: 45rem;
+        transition: .5s ease;
+    }
+
+    .banner-header-bot-nav li:first-child{
+        margin-top: 3rem;
+    }
+
+    .banner-header-bot-nav li:last-child{
+        margin-bottom: 3rem;
+    }
+
+    .toggle__menu span{
+        width: 3rem;
+        height: .3rem;
+        display: block;
+        margin-top: .3rem;
+        border-radius: 5rem;
+        transition: .5s ease;
+        background-color: var(--light);
+    }
+
+    .toggle__menu{
+        display: block;
+    }
+
+    .toggle__menu.open span:first-child{
+        transform: translate(0, 5px) rotate(225deg);
+        transition: .5s ease;
+    }
+
+    .toggle__menu.open span:nth-child(2){
+        opacity: 0;
+        transition: .5s ease;
+    }
+
+    .toggle__menu.open span:last-child{
+        transform: translate(0, -7px) rotate(-225deg);
+        transition: .5s ease;
+    }
+
+    .toggle__menu:hover{
+        cursor: pointer;
+    }
+
+    .banner-wrapper h3{
+        font-size: 4rem;
+    }
+    
+    .banner-wrapper p{
+        width: fit-content;
+    }
+
+}
+
+
+
 /* ===== ABOUT SECTION ===== */
 .about{
     padding: 2rem 0;
@@ -392,6 +481,21 @@ padding: 1rem 1.5rem;
 
 .card-3{
     background-color: #c9c325;
+}
+
+@media screen and (max-width: 500px){
+
+    .about-wrapper{
+        display: flex;
+        flex-direction: column;
+        margin-top: 0;
+    }
+    
+    
+    .about-cards{
+        width: 100%;
+    }
+
 }
 
 
@@ -516,6 +620,35 @@ padding: 1rem 1.5rem;
 }
 
 
+@media screen and (max-width: 500px){
+    .values-text h3{
+        text-align: center;
+        font-size: 5rem;
+    }
+    
+    .values-text p{
+        width: fit-content;
+        text-align: justify;
+    }
+    
+    
+    .values-top{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .values-bot{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .values-card{
+        width: 100%;
+    }
+
+}
+
+
 
 /* ===== PURPOSE SECTION ===== */
 .purpose{
@@ -575,6 +708,46 @@ padding: 1rem 1.5rem;
     text-align: justify;
 }
 
+@media screen and (max-width: 500px) {
+    .purpose-wrapper{
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+    }
+    
+    .purpose-card{
+        width: 100%;
+    }
+    
+    .purpose-card:hover{
+        background-color: rgba(0, 166, 180, .3);
+        cursor: pointer;
+    }
+    
+    .purpose-card-title{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 2rem;
+    }
+    
+    .purpose-card-title h3{
+        color: var(--dark);
+        font-size: 3rem;
+        font-weight: 700;
+    }
+    
+    .purpose-card-title img{
+        width: 7rem;
+    }
+    
+    .purpose-card p{
+        color: var(--dark);
+        font-size: 1.5rem;
+        text-align: justify;
+    }
+    
+}
 
 
 /* ===== WHY SECTION ===== */
@@ -643,6 +816,28 @@ padding: 1rem 1.5rem;
     cursor: pointer;
 }
 
+@media screen and (max-width: 500px) {
+    .why-card{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+    
+    .why-text h3{
+        text-align: center;
+    }
+    
+    .why-text p{
+        width: 100%;
+        text-align: justify;
+    }
+    
+    .why-img img{
+        width: 100%;
+    }
+    
+}
 
 
 /* ===== ACADEMY SECTION ===== */
@@ -719,6 +914,20 @@ padding: 1rem 1.5rem;
 
     position: relative;
     z-index: 2;
+}
+
+@media screen and (max-width: 500px) {
+
+    .academy-title h3{
+        font-size: 7rem;
+        line-height: 1;
+    }
+
+    .academy-about p{
+        width: 100%;
+    }
+
+
 }
 
 
@@ -804,6 +1013,39 @@ padding: 1rem 1.5rem;
     width: 40rem;
 }
 
+@media screen and (max-width: 500px){
+    .training-title{
+        font-size: 2.5rem;
+        text-align: center;
+    }
+    
+    .training-wrapper{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .training-text1 h3{
+        text-align: center;
+    }
+    
+    .training-text1 p{
+        width: fit-content;
+    }
+
+    .training-text2 h3{
+        text-align: center;
+    }
+    
+    .training-text2 p{
+        width: fit-content;
+    }
+    
+    .training-img img{
+        width: 100%;
+        margin-top: 3rem;
+    }
+}
+
 
 
 /* ===== GOAL SECTION ===== */
@@ -884,6 +1126,27 @@ padding: 1rem 1.5rem;
     background-color: rgba(206, 62, 75, 0.8);
 }
 
+@media screen and (max-width: 500px) {
+    
+    .goal-title p{
+        width: 100%;
+        text-align: justify;
+    }
+
+    .goal-title h4{
+        font-size: 3rem;
+    }
+    
+    .goal-wrapper{
+        display: flex;
+    }
+
+    .goal-card{
+        width: 100%;
+    }
+
+}
+
 
 
 /* ===== CONTACT SECTION ===== */
@@ -955,11 +1218,23 @@ textarea {
     text-align: center;
 }
 
+@media screen and (max-width: 500px) {
+
+    .contact{
+        padding: 3rem 0;
+    }
+    
+    .contact-top p{
+        width: 100%;
+    }
+
+}
+
 
 
 /* ===== LINKS SECTION ===== */
 .links{
-    padding-top: 3rem;
+    padding: 3rem 0;
 
     background-image: url('./img/links-bg.jpg');
     background-repeat: no-repeat;
@@ -1067,4 +1342,39 @@ textarea {
     color: var(--light);
     font-size: 1.5rem;
     width: 25rem;
+}
+
+@media screen and (max-width: 500px) {
+    
+    .links-top{
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    .links-top img{
+        width: 30rem;
+    }
+
+    .links-top p{
+        font-size: 1.5rem;
+        width: 100%;
+    }
+    
+    .links-bottom{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5rem;
+    }
+
+    .links-1{
+        width: 100%;
+    }
+    
+    .links-2{
+        width: 100%;
+    }
+    
+
 }
